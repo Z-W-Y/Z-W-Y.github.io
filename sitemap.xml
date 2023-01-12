@@ -216,7 +216,7 @@
   </url>
   
   <url>
-    <loc>http://www.zouweiyi.com/categories/linux/</loc>
+    <loc>http://www.zouweiyi.com/categories/%E9%AB%98%E6%95%B0/</loc>
     <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -230,7 +230,7 @@
   </url>
   
   <url>
-    <loc>http://www.zouweiyi.com/categories/%E9%AB%98%E6%95%B0/</loc>
+    <loc>http://www.zouweiyi.com/categories/linux/</loc>
     <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
