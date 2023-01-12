@@ -1,3 +1,6 @@
+http://www.zouweiyi.com/posts/MathTrick.html
+http://www.zouweiyi.com/posts/xlnx.html
+http://www.zouweiyi.com/posts/markdown.html
 http://www.zouweiyi.com/posts/alphabet.html
 http://www.zouweiyi.com/posts/print.html
 http://www.zouweiyi.com/posts/python.html
@@ -5,6 +8,3 @@ http://www.zouweiyi.com/posts/regex.html
 http://www.zouweiyi.com/posts/6103e086.html
 http://www.zouweiyi.com/posts/linux.html
 http://www.zouweiyi.com/posts/mulintegration.html
-http://www.zouweiyi.com/posts/4c0bc03.html
-http://www.zouweiyi.com/posts/flipped.html
-http://www.zouweiyi.com/posts/symmetry.html
