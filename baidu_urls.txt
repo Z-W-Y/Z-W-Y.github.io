@@ -1,4 +1,5 @@
-http://www.zouweiyi.com/posts/lnx-x.html
+http://www.zouweiyi.com/posts/ln(1+x).html
+http://www.zouweiyi.com/posts/lnxchux.html
 http://www.zouweiyi.com/posts/MathTrick.html
 http://www.zouweiyi.com/posts/xlnx.html
 http://www.zouweiyi.com/posts/markdown.html
@@ -7,4 +8,3 @@ http://www.zouweiyi.com/posts/print.html
 http://www.zouweiyi.com/posts/python.html
 http://www.zouweiyi.com/posts/regex.html
 http://www.zouweiyi.com/posts/6103e086.html
-http://www.zouweiyi.com/posts/linux.html
