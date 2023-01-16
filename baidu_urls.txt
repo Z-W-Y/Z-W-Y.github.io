@@ -1,3 +1,4 @@
+http://www.zouweiyi.com/posts/xingxingxian.html
 http://www.zouweiyi.com/posts/ln(1+x).html
 http://www.zouweiyi.com/posts/lnxchux.html
 http://www.zouweiyi.com/posts/MathTrick.html
@@ -7,4 +8,3 @@ http://www.zouweiyi.com/posts/alphabet.html
 http://www.zouweiyi.com/posts/print.html
 http://www.zouweiyi.com/posts/python.html
 http://www.zouweiyi.com/posts/regex.html
-http://www.zouweiyi.com/posts/6103e086.html
