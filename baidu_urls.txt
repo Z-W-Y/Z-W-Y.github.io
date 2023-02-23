@@ -1,10 +1,10 @@
-http://www.zouweiyi.com/posts/fangcheng.html
+http://www.zouweiyi.com/posts/heart.html
+http://www.zouweiyi.com/posts/EquationSolve.html
 http://www.zouweiyi.com/posts/weida.html
 http://www.zouweiyi.com/posts/rose.html
 http://www.zouweiyi.com/posts/baixian.html
-http://www.zouweiyi.com/posts/xingxingxian.html
+http://www.zouweiyi.com/posts/star.html
 http://www.zouweiyi.com/posts/ln(1+x).html
 http://www.zouweiyi.com/posts/lnxchux.html
 http://www.zouweiyi.com/posts/MathTrick.html
 http://www.zouweiyi.com/posts/xlnx.html
-http://www.zouweiyi.com/posts/markdown.html
