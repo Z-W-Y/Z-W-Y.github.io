@@ -1,3 +1,5 @@
+http://www.zouweiyi.com/posts/inequality.html
+http://www.zouweiyi.com/posts/limite.html
 http://www.zouweiyi.com/posts/factorial.html
 http://www.zouweiyi.com/posts/xx.html
 http://www.zouweiyi.com/posts/doublet.html
@@ -6,5 +8,3 @@ http://www.zouweiyi.com/posts/EquationSolve.html
 http://www.zouweiyi.com/posts/veda.html
 http://www.zouweiyi.com/posts/rose.html
 http://www.zouweiyi.com/posts/baixian.html
-http://www.zouweiyi.com/posts/star.html
-http://www.zouweiyi.com/posts/ln(1+x).html
