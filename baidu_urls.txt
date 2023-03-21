@@ -1,3 +1,4 @@
+http://www.zouweiyi.com/posts/DerivativeLimit.html
 http://www.zouweiyi.com/posts/inequality.html
 http://www.zouweiyi.com/posts/limite.html
 http://www.zouweiyi.com/posts/factorial.html
@@ -7,4 +8,3 @@ http://www.zouweiyi.com/posts/heart.html
 http://www.zouweiyi.com/posts/EquationSolve.html
 http://www.zouweiyi.com/posts/veda.html
 http://www.zouweiyi.com/posts/rose.html
-http://www.zouweiyi.com/posts/baixian.html
