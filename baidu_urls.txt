@@ -1,4 +1,5 @@
-http://www.zouweiyi.com/posts/diary.html
+http://www.zouweiyi.com/posts/diary23.4.4.html
+http://www.zouweiyi.com/posts/diary23.4.1.html
 http://www.zouweiyi.com/posts/DerivativeLimit.html
 http://www.zouweiyi.com/posts/inequality.html
 http://www.zouweiyi.com/posts/limite.html
@@ -7,4 +8,3 @@ http://www.zouweiyi.com/posts/xx.html
 http://www.zouweiyi.com/posts/doublet.html
 http://www.zouweiyi.com/posts/heart.html
 http://www.zouweiyi.com/posts/EquationSolve.html
-http://www.zouweiyi.com/posts/veda.html

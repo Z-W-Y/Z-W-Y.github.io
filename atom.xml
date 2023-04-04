@@ -6,7 +6,7 @@
   <link href="http://www.zouweiyi.com/atom.xml" rel="self"/>
   
   <link href="http://www.zouweiyi.com/"/>
-  <updated>2023-04-01T01:15:08.444Z</updated>
+  <updated>2023-04-04T09:05:32.719Z</updated>
   <id>http://www.zouweiyi.com/</id>
   
   <author>
@@ -17,13 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2023.4.1祭</title>
-    <link href="http://www.zouweiyi.com/posts/diary.html"/>
-    <id>http://www.zouweiyi.com/posts/diary.html</id>
-    <published>2023-04-01T00:53:58.000Z</published>
-    <updated>2023-04-01T01:15:08.444Z</updated>
+    <title>2023.4.4记</title>
+    <link href="http://www.zouweiyi.com/posts/diary23.4.4.html"/>
+    <id>http://www.zouweiyi.com/posts/diary23.4.4.html</id>
+    <published>2023-04-04T08:57:26.000Z</published>
+    <updated>2023-04-04T09:05:32.719Z</updated>
     
-    <content type="html"><![CDATA[<p>2023/3/30<br>“省优秀学生干部”答辩：羊栋能不能si一si？本来是素质评比，硬被你整成ppt大赛？真tmd的是有大病昂。就你威风大是吧，全部辅导员都要看你脸色行事呗，真行sb。所谓的黄嘉嘉，狗屁不是，当了几个部长就当自己牛逼了是吧，ppt做的好就打天下了是吧，能有几个有含金量的奖项捏？毫无技术可言。</p><p>2023/3/31<br>苹果是你爹娘啊？就会拿5G说事呗，华为不是5G，信号也随便吊打你的垃圾苹果吧。不能用5G是个中国人心里都有数吧？什么？你说你不是？真行！还得是你，美利坚的舔dog。</p>]]></content>
+    <content type="html"><![CDATA[<p>越考研越来越近，心态也越来越佛系<br>省三好学生是什么？无真才实学之人的争抢罢了<br>大创合格又如何？学校层次太低，老师更低</p><p>努力不一定会有结果，但摆烂一定会失败。<br>谁也不能阻止我上岸！<br>摆正心态，窗外一切之事与我无关。<br>264，考研加油。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;越考研越来越近，心态也越来越佛系&lt;br&gt;
+省三好学生是什么？无真才实学之人的争抢罢了&lt;br&gt;
+大创合格又如何？学校层次太低，老师更低&lt;/p&gt;
+&lt;p&gt;努力不一定会有结果，但摆烂一定会失败。&lt;br&gt;
+谁也不能阻止我上岸！&lt;br&gt;
+摆正心态，窗外一切之事与我无关。&lt;br&gt;
+264</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="http://www.zouweiyi.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2023.4.1祭</title>
+    <link href="http://www.zouweiyi.com/posts/diary23.4.1.html"/>
+    <id>http://www.zouweiyi.com/posts/diary23.4.1.html</id>
+    <published>2023-04-01T00:53:58.000Z</published>
+    <updated>2023-04-04T09:04:12.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>2023/3/30<br>“省优秀学生干部”答辩：羊栋能不能si一si？本来是素质评比，硬被你整成ppt大赛？真tmd的是有大病昂。就你威风大是吧，全部辅导员都要看你脸色行事呗，真行sb。所谓的黄嘉嘉，狗屁不是，当了几个部长就当自己牛逼了是吧，ppt做的好就打天下了是吧，能有几个有含金量的奖项捏？毫无技术可言。</p><p>2023/3/31<br>苹果是你爹娘啊？每个人都必须买你家的苹果？真会恶心人喏。就会拿5G说事呗，华为不是5G，信号也随便吊打你的垃圾苹果吧。不能用5G是个中国人心里都有数吧？什么？你说你不是？真行！还得是你，美利坚的舔dog。</p>]]></content>
     
     
       
@@ -444,26 +472,6 @@
     
     
     <category term="小知识" scheme="http://www.zouweiyi.com/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C 和 python 的格式化输出</title>
-    <link href="http://www.zouweiyi.com/posts/print.html"/>
-    <id>http://www.zouweiyi.com/posts/print.html</id>
-    <published>2022-12-24T11:07:08.000Z</published>
-    <updated>2023-01-01T02:56:57.280Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a = <span class="number">1234</span>;</span><br><span class="line"><span class="type">float</span> b = <span class="number">123.456</span>;</span><br><span class="line"><span class="type">double</span> c = <span class="number">12345.54321</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%2d,%2.1f,%2.11f&quot;</span>, a, b, c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">1234</span>,<span class="number">123.5</span>,<span class="number">12345.54321000000</span></span><br></pre></td></tr></table></figure><ul><li><code>%md</code>：m为指定输出数据的宽度<br>如果位数小于 m，则左端补以空格，如果大于 m，则按实际位数输出<br>显然 1234 的位数是 4，大于 %2d 中指定的长度 2，按实际位数输出，所以结果为 1234</li><li><code>%m.nf</code>：指定输出数据宽度为 m 位，其中小数占 n 位，如果数值长度小于 m，则左端补空格，大于的话就按原长度输出；%-m.nf 如果数值长度小于 m，则右端补空格，大于的话就按原长度输出<br>%2.1f 就是指长度 2 位，含 1 位小数位，由于 123.456 原长度大于 2，所以原样输出，但只能保留 1 位小数，所以结果是 123.4<br>%2.11f，就是含 11 位小数，12345.54321 显然长度不够，则右端补零</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li</summary>
-      
-    
-    
     
     
   </entry>
