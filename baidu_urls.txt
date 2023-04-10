@@ -1,3 +1,4 @@
+http://www.zouweiyi.com/posts/diary23.4.10.html
 http://www.zouweiyi.com/posts/diary23.4.4.html
 http://www.zouweiyi.com/posts/diary23.4.1.html
 http://www.zouweiyi.com/posts/DerivativeLimit.html
@@ -7,4 +8,3 @@ http://www.zouweiyi.com/posts/factorial.html
 http://www.zouweiyi.com/posts/xx.html
 http://www.zouweiyi.com/posts/doublet.html
 http://www.zouweiyi.com/posts/heart.html
-http://www.zouweiyi.com/posts/EquationSolve.html
