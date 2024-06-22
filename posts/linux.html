@@ -1,0 +1,673 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Linux | ZouWeiyi's Home</title><meta name="keywords" content="邹惟一"><meta name="author" content="邹惟一"><meta name="copyright" content="邹惟一"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="常用命令介绍 (1) ctrl c: 取消命令，并且换行 (2) ctrl u: 清空本行命令 ps windows下 为 esc (3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项 (4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件 ls -l 展示详细信息、ls -lh 文件大小换算、ls -a 显示隐藏文件 (5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="http://www.zouweiyi.com/posts/linux.html">
+<meta property="og:site_name" content="ZouWeiyi&#39;s Home">
+<meta property="og:description" content="常用命令介绍 (1) ctrl c: 取消命令，并且换行 (2) ctrl u: 清空本行命令 ps windows下 为 esc (3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项 (4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件 ls -l 展示详细信息、ls -lh 文件大小换算、ls -a 显示隐藏文件 (5">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.zouweiyi.com/img/%E4%BA%8C%E6%AC%A1%E5%85%830.jpg">
+<meta property="article:published_time" content="2022-11-01T10:52:35.000Z">
+<meta property="article:modified_time" content="2022-12-18T01:11:10.099Z">
+<meta property="article:author" content="邹惟一">
+<meta property="article:tag" content="邹惟一">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.zouweiyi.com/img/%E4%BA%8C%E6%AC%A1%E5%85%830.jpg"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="http://www.zouweiyi.com/posts/linux"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69f23bb929666dd201b3b2d150a46e5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-18 09:11:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/runtime.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="ZouWeiyi's Home" type="application/atom+xml">
+</head><body>
+    <div id='loader'>
+        
+                <div class="loading-left-bg"></div>
+                <div class="loading-right-bg"></div>
+                <div class="spinner-box">
+                    <div class="configure-border-1">
+                        <div class="configure-core"></div>
+                    </div>
+                    <div class="configure-border-2">
+                        <div class="configure-core"></div>
+                    </div>
+                    <div class="loading-word">加载中...</div>
+                </div>
+                
+    </div>
+
+    <script>
+        var endLoading = function () {
+            document.body.style.overflow = 'auto';
+            document.getElementById('loader').classList.add("loading");
+        }
+        window.addEventListener('load', endLoading);
+    </script>
+    <div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZouWeiyi's Home</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Linux</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-01T10:52:35.000Z" title="发表于 2022-11-01 18:52:35">2022-11-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-18T01:11:10.099Z" title="更新于 2022-12-18 09:11:10">2022-12-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/linux/">linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h3 id="常用命令介绍">常用命令介绍</h3>
+<p>(1) ctrl c: 取消命令，并且换行</p>
+<p>(2) ctrl u: 清空本行命令 ps windows下 为 esc</p>
+<p>(3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项</p>
+<p>(4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件</p>
+<p>ls -l 展示详细信息、ls -lh 文件大小换算、ls -a 显示隐藏文件</p>
+<p>(5) pwd: 显示当前路径</p>
+<p>(6) cd XXX: 进入XXX目录下</p>
+<p>(7) cp XXX YYY: 将XXX文件复制成YYY，XXX和YYY可以是一个路径，比如…/dir_c/a.txt，表示上层目录下的dir_c文件夹下的文件a.txt</p>
+<p>(8) mkdir XXX: 创建目录XXX</p>
+<p>(9) rm XXX: 删除普通文件;  rm XXX -r: 删除文件夹 全称：remove<br>
+-f，–force：直接删除，不再询问<br>
+-r，-R，–recursive：递归删除，即删除所有子目录和子目录下的文件<br>
+-d，–dir，删除空目录<br>
+rmdir 删除空的子目录</p>
+<p>(10) mv XXX YYY: 将XXX文件移动到YYY，和cp命令一样，XXX和YYY可以是一个路径；重命名也是用这个命令</p>
+<p>(11) touch XXX: 创建一个文件 ps windows 下不生效</p>
+<p>(12) cat XXX: 展示文件XXX中的内容</p>
+<p>(13) 复制文本<br>
+windows/Linux下：Ctrl + insert</p>
+<p>(14) 粘贴文本<br>
+windows/Linux下：Shift + insert</p>
+<p>(15) 创建用户<br>
+useradd aaa // 创建用户名为 aaa 的用户<br>
+useradd -g group1 aaa // 创建用户名为 aaa 的用户并归到 group1 组内</p>
+<p>(16) 创建用户<br>
+groupadd group1 // 创建名为 group1 的组</p>
+<p>(17) 切换用户<br>
+su 用户名<br>
+该命令可以实现任何身份的切换，包括从普通用户切换为 root 用户（su root）、从 root 用户切换为普通用户以及普通用户之间的切换。<br>
+普通用户之间切换以及普通用户切换至 root 用户，都需要知晓对方的密码，只有正确输入密码，才能实现切换；从 root 用户切换至其他用户，无需知晓对方密码，直接可切换成功。</p>
+<h3 id="linux-优点">linux 优点</h3>
+<p>1、提供了先进的网络支持，内置 TCP/IP 协议<br>
+2、真正意义上的多任务、多用户操作系统<br>
+3、开放源代码，用户可以自己对系统进行改造<br>
+4、支持数十种文件系统格式</p>
+<h3 id="权限">权限</h3>
+<p>通过 ls –l 查看当前目录的详细属性<br>
+权限为 drwxrwxr-x，d 表示目录，同一位置如果为 - 则表示普通文件<br>
+rwxrwxr-x 表示三种角色的权限，每三位为一种角色，依次为 user，group，other 权限，如上则表示 user 的权限为rwx，group的权限为rwx，other的权限为r-x</p>
+<ul>
+<li>
+<p>chmod(change mode) 控制用户对文件的权限的命令</p>
+<p>-R : 对目前目录下的所有文件与子目录进行相同的权限变更(即以递归的方式逐个变更)</p>
+<p>chmod  –R  g+rwx  peter // 授予组对 peter 目录拥有 rwx 权限</p>
+<p>chmod  –R  u=rx,g=rx,o=rx  peter // 授予用户、组、其他人对 peter 目录只有 rx 权限</p>
+<p>chmod  –R  777  peter // 授予用户、组、其他人对 peter 目录拥有 rwx 权限</p>
+</li>
+</ul>
+<h3 id="vim">vim</h3>
+<p><img src="/img/vim.png" alt="vim"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1、在一般模式：</span><br><span class="line">yy // 复制当前行</span><br><span class="line">5yy // 复制当前行向下的5行（包括当前行）</span><br><span class="line">p // 粘贴</span><br><span class="line">dd // 删除当前行</span><br><span class="line">10dd // 删除当前行向下的5行（包括当前行）</span><br><span class="line">u // 撤销</span><br><span class="line">gg // 光标移动到首行</span><br><span class="line">G // 光标移动到末行</span><br><span class="line">20G // 光标移动到第20行</span><br><span class="line"></span><br><span class="line">2、在一般模式下输入 / 进入查找模式:</span><br><span class="line">/关键字 回车，再输入 n 查找下一个</span><br><span class="line"></span><br><span class="line">3、在一般模式下输入 : 进入命令模式:</span><br><span class="line">:set nu // 设置行号</span><br><span class="line">:set nonu // 取消行号</span><br></pre></td></tr></table></figure>
+<h3 id="C-C-源文件">C / C++ 源文件</h3>
+<ul>
+<li>步骤：预处理、编译、汇编、链接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c -o test2 //编译为 test2.out 文件</span><br><span class="line">g++ test.c // 编译 C++ 文件</span><br><span class="line">./test2.out // 运行 test2.out 可执行文件，相当于 exe 文件</span><br></pre></td></tr></table></figure>
+<h3 id="路径">路径</h3>
+<p>cd … 返回上层目录</p>
+<p>cd 或 cd ~ 或 cd ~/，进入家目录， 即 /home/zouweiyi</p>
+<p>cd /，进入根目录即 /</p>
+<h3 id="常见目录">常见目录</h3>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bin</td>
+<td>存放二进制可执行文件(ls,cat,mkdir等)，常用命令一般都在这里</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>存放系统管理和配置文件</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>存放所有用户文件的根目录，是用户主目录的基点，比如用户 user 的主目录就是 /home/user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="标准-I-O">标准 I/O</h3>
+<ul>
+<li>
+<p>操作系统提供的功能<br>
+1、系统调用</p>
+<ul>
+<li>进程控制</li>
+<li>进程间通信</li>
+<li>文件系统控制</li>
+<li>存储管理</li>
+<li>网络管理</li>
+<li>套接字控制</li>
+<li>用户管理</li>
+</ul>
+<p>2、用户程序</p>
+</li>
+<li>
+<p>linux 遵循 POSIX 标准</p>
+</li>
+<li>
+<p>标准 I/O 遵循 ANSI 规范</p>
+</li>
+<li>
+<p>分类<br>
+全缓冲、行缓冲、无缓冲</p>
+</li>
+<li>
+<p>mode 取值</p>
+<table>
+<thead>
+<tr>
+<th>mode</th>
+<th>解释1</th>
+<th>解释2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>只读</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>可读写</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>w</td>
+<td>只写</td>
+<td>覆盖原有文件</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>可读写</td>
+<td>覆盖原有文件</td>
+</tr>
+<tr>
+<td>a</td>
+<td>附加打开只写</td>
+<td>不覆盖原有文件</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>附加打开可读写</td>
+<td>不覆盖原有文件</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="文件I-O">文件I/O</h3>
+<ul>
+<li>
+<p>VFS</p>
+<p>Virtual File System，虚拟文件系统，把各种具体的文件系统的公共部分抽取出来，形成一个抽象层。VFS是应用程序与具体的文件系统之间的桥梁，处于系统内核空间</p>
+</li>
+<li>
+<p>文件分类<br>
+普通文件、目录文件、符号链接文件、管道文件、套接字文件、设备文件</p>
+</li>
+<li>
+<p>文件 IO 与 标准 I/O<br>
+文件：低级磁盘 I/O，每次操作都会执行相关的系统调用<br>
+标准：高级磁盘 I/O，在文件 I/O 基础上封装了缓冲机制</p>
+</li>
+<li>
+<p>fcnt() 函数<br>
+file control，用来操作文件描述符，对已打开的文件进行各种操作，能够管理文件锁，获取和设置文件相关标志位以及复制文件描述符</p>
+</li>
+<li>
+<p>文件锁<br>
+1、建议性锁，要求每个相关程序在访问文件之前检查是否有锁存在，并尊重已有锁，由 lockf() 实现<br>
+2、强制性锁，由内核执行的锁，当一个文件被上锁，进行写入操作时，阻止任何程序读写，由 fcntl() 实现</p>
+</li>
+</ul>
+<h3 id="进程控制">进程控制</h3>
+<ul>
+<li>
+<p>任务与进程<br>
+一个任务包含一个或多个完成独立功能的进程</p>
+</li>
+<li>
+<p>进程与线程<br>
+进程是并发执行的程序在执行过程中分配和管理资源的基本单位，是一个动态概念，竞争计算机系统资源的基本单位。线程是进程的一个执行单元，是调度的基本单位。比进程更小的独立运行的基本单位。线程也被称为轻量级进程</p>
+</li>
+<li>
+<p>只有用户级线程的操作系统中，调度以进程为单位，由用户程序控制进程中的多个线程运行</p>
+</li>
+<li>
+<p>每个执行的程序都成为一个进程。每个进程都分配一个 ID 号（pid）</p>
+</li>
+<li>
+<p>进程特性：<br>
+并发性、动态性、交互性、独立性</p>
+</li>
+<li>
+<p>进程类型：<br>
+交互式、批处理、守护</p>
+</li>
+<li>
+<p>进程状态<br>
+1、运行<br>
+2、可中断的阻塞<br>
+3、不可中断的阻塞<br>
+4、暂停<br>
+5、僵死<br>
+6、消亡</p>
+</li>
+<li>
+<p>fork() 函数<br>
+用于从已存在的进程中创建一个新进程<br>
+在子进程中返回 0<br>
+在父进程中返回 子进程的 PID</p>
+</li>
+<li>
+<p>exit() 与 _exit() 的区别<br>
+exit() 在终止当前进程之前检查该进程打开了哪些文件，并把文件缓冲区中的内容写回文件中<br>
+_exit() 直接使进程停止运行</p>
+</li>
+<li>
+<p>wait() 与 waitpid() 的区别<br>
+wait() 使父进程阻塞，直到一个子进程结束或者该进程接到了一个指定的信号为止<br>
+waitpid() 提供了非阻塞版本的 wait() 功能，并不一定等待第一个终止的子进程</p>
+</li>
+<li>
+<p>进程存在方式：<br>
+前台：用户目前的屏幕上可以进行操作的进程<br>
+后台：实际在操作，但屏幕上无法看到的进程，如 mysql、tomcat</p>
+</li>
+<li>
+<p>常见参数<br>
+pid  process identity，进程号<br>
+ppid  parent process identity，父进程号<br>
+grep  Global Regular Expression Print，文本搜索<br>
+%CPU  进程占用CPU的百分比<br>
+%MEM  进程占用物理内存的百分比<br>
+VSZ  Virtual Memory Size，进程占用的虚拟内存大小<br>
+RSS  Resident Set Size，进程占用的物理内存大小STAT  进程状态<br>
+STARTED  进程的启用时间<br>
+TIME  进程使用CPU的时间</p>
+</li>
+<li>
+<p>ps命令用来查看目前系统中执行的进程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ps -a // 显示当前终端的所有进程信息</span><br><span class="line">ps -u // 以用户的格式显示进程信息</span><br><span class="line">ps -x // 显示后台进程运行的参数</span><br><span class="line">ps -aux // 组合使用</span><br><span class="line">ps -aux | grep xxx // 文本搜索</span><br><span class="line">ps -ef // 以全格式显示当前所有的进程</span><br><span class="line">ps -aux | grep bash // 查看终端进程</span><br><span class="line">ps -aux | grep sshd // 查看远程连接进程</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>kill命令用来终止进程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill [选项] 进程号</span><br><span class="line">kill -9 进程号 // 强制终止进程</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="进程通信">进程通信</h3>
+<ul>
+<li>
+<p>分类</p>
+<p>1、传统：管道、信号</p>
+<p>2、System V：共享内存、消息队列、信号灯</p>
+<p>3、BSD：套接字</p>
+</li>
+<li>
+<p>管道</p>
+<p>将前一个命令的标准输出作为后一个命令的标准输入，称之为管道</p>
+<p>1、无名管道（匿名管道）</p>
+<p>​	创建两个文件描述符，fd[0] 用于读管道，fd[1] 用于写管道</p>
+<p>​	如果所有写进程都关闭了管道的写端时，read 返回 0，意味着文件的结束</p>
+<p>​	只能以单工的方式通信</p>
+<p>​	如果管道中无数据，则读进程将被挂起直到数据被写进管道</p>
+<p>2、有名管道</p>
+<p>创建命名管道除了使用 mkfifo 函数外，还可以使用 mknod 函数</p>
+<ul>
+<li>
+<p>区别</p>
+<p>无名管道只能用于具有亲缘关系的进程的通信</p>
+<p>有名管道可以使互不相关的两个进程实现彼此的通信</p>
+</li>
+</ul>
+</li>
+<li>
+<p>信号</p>
+<ul>
+<li>
+<p>信号通信机制可用于异步通信</p>
+</li>
+<li>
+<p>信号处理函数：kill()、raise()、alarm()、signal()、sigaction()、pause()</p>
+</li>
+<li>
+<p>常用信号</p>
+<p>SIGINT：interrupt request，中断请求信号（可屏蔽），在输入 Ctrl + C 后发出</p>
+<p>SIGQUIT：在输入 Ctrl + \ 后发出</p>
+<p>SIGKILL：立即结束程序的运行，不能被阻塞、处理和忽略</p>
+</li>
+</ul>
+</li>
+<li>
+<p>共享内存</p>
+<ul>
+<li>
+<p>最为高效的通信方式</p>
+</li>
+<li>
+<p>适用于在进程间传输大量的数据</p>
+</li>
+<li>
+<p>使用共享内存无法解决多个进程同时读写的冲突</p>
+</li>
+<li>
+<p>指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipcs -m // 查看已经创建的共享内存情况</span><br><span class="line">ipcrm -m 43 // 删除指定共享内存</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>shmget() 创建私有共享内存</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    system(<span class="string">&quot;ipcs -m&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> shmid;</span><br><span class="line">    shmid = shmget(IPC_PRIVATE, <span class="number">128</span>, <span class="number">0666</span>);</span><br><span class="line">    <span class="keyword">if</span> (shmid &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;failed!&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;success, shmid = %d\n&quot;</span>, shmid);</span><br><span class="line">    system(<span class="string">&quot;ipcs -m&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>shmget() 用 key 来创建共享内存</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    system(<span class="string">&quot;ipcs -m&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">key_t</span> key;</span><br><span class="line">    key = ftok(<span class="string">&quot;.&quot;</span>, <span class="string">&quot;a&quot;</span>); <span class="comment">// 创建 key</span></span><br><span class="line">    <span class="keyword">if</span> (key &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;key ERRER!&quot;</span>);</span><br><span class="line">    	<span class="keyword">return</span> <span class="number">-2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;key = %x\n&quot;</span>, key);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shmid;</span><br><span class="line">    shmid = shmget(key, <span class="number">128</span>, IPC_CREAT | <span class="number">0666</span>); <span class="comment">// 传入 key</span></span><br><span class="line">    <span class="keyword">if</span> (shmid &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;failed!&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;success, shmid = %d\n&quot;</span>, shmid);</span><br><span class="line">    system(<span class="string">&quot;ipcs -m&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>shmat()<br>
+把创建的共享内存映射到具体的进程空间中</p>
+</li>
+<li>
+<p>shmd()<br>
+撤销映射</p>
+</li>
+<li>
+<p>shmctl()<br>
+传入 IPC_RMID 删除共享内存</p>
+</li>
+</ul>
+</li>
+<li>
+<p>消息队列<br>
+可以实现消息的随机查询，比 FIFO 具有更大的优势。这些消息存在于内核中</p>
+</li>
+<li>
+<p>信号灯（信号量）<br>
+信号量可以用于实现多进程间的同步与互斥</p>
+<ul>
+<li>semget(key, nsems, semflg)<br>
+创建信号量或获得系统已存在的信号量，key 是信号量的键值，nsems 是创建信号量的个数，semflg 是信号量的权限位</li>
+<li>semctl()<br>
+初始化信号量<br>
+传入 IPC_SETVAL 设置信号量的值<br>
+传入 IPC_RMID 删除信号量</li>
+<li>semop()<br>
+进行信号量的 PV 操作</li>
+</ul>
+</li>
+<li>
+<p>套接字<br>
+套接字可用于不在同一台主机的两个进程通信</p>
+</li>
+</ul>
+<h3 id="多线程">多线程</h3>
+<ul>
+<li>
+<p>线程运行在用户空间</p>
+</li>
+<li>
+<p>线程属性：</p>
+<p>分离属性、堆栈大小、调度策略、优先级</p>
+</li>
+<li>
+<p>生产者与消费者为何使用 3 个信号量：</p>
+<p>avail 和 full 用于解决生产者和消费者线程之间的同步问题，mutex 用于这两个线程之间的互斥问题<br>
+avail 表示缓冲区中的空单元数，full 表示缓冲区中非空单元数，mutex 是互斥信号量</p>
+</li>
+<li>
+<p>信号量的互斥</p>
+</li>
+</ul>
+<p><img src="/img/%E4%BA%92%E6%96%A5.png" alt="互斥"></p>
+<ul>
+<li>信号量的同步</li>
+</ul>
+<p><img src="/img/%E5%90%8C%E6%AD%A5.png" alt="同步"></p>
+<h3 id="网络">网络</h3>
+<ul>
+<li>端口号是 16bit 的地址码，端口号和 IP 地址构成一个插口（socket）</li>
+<li>一个完整的网络程序应该包含两个独立的程序，它们分别运行在客户端和服务器端</li>
+<li>OSI 参考模型与 TCP/IP 参考模型<br>
+<img src="/img/OSI.png" alt="OSI和TCP/IP"></li>
+<li>常见协议<br>
+网络接口层：ARP、RARP<br>
+网络层：ICMP、IP、IGMP<br>
+传输层：TCP、UDP</li>
+<li>选择<br>
+TCP：对数据可靠性要求高的应用，网络状态不是很好的情况<br>
+UDP：对实时性要求高的应用<br>
+相同条件下 UDP 发送数据的速度要比 TCP 快<br>
+UDP 具有比 TCP 更好的网络性能，经常用于视频会议直播中</li>
+<li>套接字类型<br>
+流式套接字、数据报套接字、原始套接字</li>
+<li>TCP、UDP 流程</li>
+</ul>
+<p><img src="/img/TCP.png" alt="TCP"></p>
+ <center>图 TCP流程</center>
+<p><img src="/img/IP.png" alt="IP"></p>
+<center>图 UDP流程</center>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://www.zouweiyi.com">邹惟一</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.zouweiyi.com/posts/linux.html">http://www.zouweiyi.com/posts/linux.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.zouweiyi.com" target="_blank">ZouWeiyi's Home</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/%E4%BA%8C%E6%AC%A1%E5%85%830.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">邹惟一</div><div class="author-info__description">爱意东升西落 浪漫至死不渝</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Z-W-Y"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">常用命令介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E4%BC%98%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">linux 优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%99%90"><span class="toc-number">3.</span> <span class="toc-text">权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim"><span class="toc-number">4.</span> <span class="toc-text">vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-C-%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">C &#x2F; C++ 源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84"><span class="toc-number">6.</span> <span class="toc-text">路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9B%AE%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">常见目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86-I-O"><span class="toc-number">8.</span> <span class="toc-text">标准 I&#x2F;O</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6I-O"><span class="toc-number">9.</span> <span class="toc-text">文件I&#x2F;O</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">10.</span> <span class="toc-text">进程控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="toc-number">11.</span> <span class="toc-text">进程通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">12.</span> <span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-number">13.</span> <span class="toc-text">网络</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/sinhx.html" title="双曲函数图像赏析">双曲函数图像赏析</a><time datetime="2024-06-21T15:49:48.000Z" title="发表于 2024-06-21 23:49:48">2024-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/DerivativeLimit.html" title="导数极限定理">导数极限定理</a><time datetime="2023-03-20T12:59:48.000Z" title="发表于 2023-03-20 20:59:48">2023-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/inequality.html" title="不等式">不等式</a><time datetime="2023-03-11T08:17:29.000Z" title="发表于 2023-03-11 16:17:29">2023-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/limite.html" title="重要极限 e">重要极限 e</a><time datetime="2023-03-10T07:53:53.000Z" title="发表于 2023-03-10 15:53:53">2023-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/factorial.html" title="阶乘的图像">阶乘的图像</a><time datetime="2023-03-09T11:36:26.000Z" title="发表于 2023-03-09 19:36:26">2023-03-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 邹惟一</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.zouweiyi.com/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.zouweiyi.com/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已在苏进行备案" title=""><img src="https://img.shields.io/badge/苏ICP备-2022007618号-e1d492?style=flat&amp;logo=data:image/png;base64,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" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime.js"></script><!-- hexo injector body_end end --></body></html>
