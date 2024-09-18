@@ -358,13 +358,6 @@
   </url>
   
   <url>
-    <loc>https://www.zouweiyi.com/tags/xlnx/</loc>
-    <lastmod>2024-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zouweiyi.com/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -373,6 +366,13 @@
   
   <url>
     <loc>https://www.zouweiyi.com/tags/lnx/</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zouweiyi.com/tags/xlnx/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -407,13 +407,6 @@
   </url>
   
   <url>
-    <loc>https://www.zouweiyi.com/tags/%E5%A4%96%E6%91%86%E7%BA%BF/</loc>
-    <lastmod>2024-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zouweiyi.com/tags/%E5%AF%BC%E6%95%B0%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -421,7 +414,7 @@
   </url>
   
   <url>
-    <loc>https://www.zouweiyi.com/tags/%E5%B9%82%E5%87%BD%E6%95%B0/</loc>
+    <loc>https://www.zouweiyi.com/tags/%E5%A4%96%E6%91%86%E7%BA%BF/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -429,6 +422,13 @@
   
   <url>
     <loc>https://www.zouweiyi.com/tags/%E5%BF%83%E8%84%8F%E7%BA%BF/</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zouweiyi.com/tags/%E5%B9%82%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
